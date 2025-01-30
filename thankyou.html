@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - BuildPathWay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- REQUIRED: Update Facebook Pixel Purchase Event -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '994945596015483'); // <- UPDATE THIS
+        fbq('track', 'Purchase', {
+            value: 99, // <- UPDATE THIS
+            currency: 'INR'
+        });
+    </script>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --success: #10b981;
+            --text: #1f2937;
+            --light: #f3f4f6;
+            --accent: #fbbf24;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background: #f8fafc;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .success-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        h1 {
+            color: var(--success);
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .steps-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--light);
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .resources {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Welcome to BuildPathWay. Let's start your learning journey!</p>
+        </div>
+
+        <div class="steps-card">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Access Your Learning Sheet</h3>
+                    <p>Click the button below to access your BuildPathWay sheet. Make sure you're logged into your Google account.</p>
+                    <!-- REQUIRED: Update sheet URL -->
+                    <a href="https://docs.google.com/spreadsheets/d/1HuRN3rxkSSwkew6Mc7zQLuPBrNrzpfYZ61GNYyxEs_o/edit?usp=sharing" target="_blank" class="btn btn-primary" id="sheet-btn">
+                        <i class="fas fa-table"></i>
+                        Access Sheet
+                    </a>
+               
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Make Your Copy</h3>
+                    <p>Once the sheet opens, go to File > Make a copy. This will create your personal copy of the roadmap in your Google Drive.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Additional Resources</h3>
+                    <p>Here are some resources to help you get started:</p>
+                    <div class="resources">
+                        <!-- REQUIRED: Update guide URL -->
+                        <a href="https://docs.google.com/presentation/d/1vxpYG_pxf2sRXWbw_3w9RgnJU4b-uauxQ1xCbMQEtWU/edit?usp=sharing" target="_blank" class="btn btn-secondary" id="guide-btn">
+                            <i class="fas fa-play"></i>
+                            Quick Start Guide
+                        </a>
+                        <!-- REQUIRED: Update support URL -->
+                        <!-- <a href="#" class="btn btn-secondary" id="support-btn">
+                            <i class="fas fa-headset"></i>
+                            Get Support
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Track resource clicks
+        document.getElementById('sheet-btn').addEventListener('click', function() {
+            fbq('track', 'ViewContent', {content_name: 'Sheet Access'});
+        });
+
+        document.getElementById('guide-btn').addEventListener('click', function() {
+            fbq('track', 'ViewContent', {content_name: 'Quick Guide'});
+        });
+
+        document.getElementById('support-btn').addEventListener('click', function() {
+            fbq('track', 'ViewContent', {content_name: 'Support'});
+        });
+    </script>
+</body>
+</html>
