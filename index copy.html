@@ -5,36 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BuildPathWay</title>
     
-    <!-- REQUIRED: Update Facebook Pixel ID -->
-   
     <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '994945596015483');
-    fbq('track', 'PageView');
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '994945596015483');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=994945596015483&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-    <!-- End Facebook Pixel Code -->
 
-    <!-- REQUIRED: Update Google Analytics -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID_HERE"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'YOUR_GA_ID_HERE'); // <- UPDATE THIS
+        gtag('config', 'YOUR_GA_ID_HERE');
     </script>
-    <!-- End Google Analytics -->
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -46,6 +41,8 @@
             --text: #1f2937;
             --light: #f3f4f6;
             --accent: #fbbf24;
+            --success: #10b981;
+            --warning: #f59e0b;
         }
 
         * {
@@ -103,6 +100,7 @@
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
             color: var(--text);
+            line-height: 1.2;
         }
 
         .hero p {
@@ -185,6 +183,70 @@
             color: var(--text);
         }
 
+        /* New Styles */
+        .benefits-section {
+            padding: 4rem 5%;
+            background: var(--light);
+        }
+
+        .benefits-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .instructions-section {
+            padding: 4rem 5%;
+            background: white;
+        }
+
+        .instruction-card {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+
+        .important-note {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -199,8 +261,12 @@
                 justify-content: center;
             }
 
-            .features-grid {
+            .features-grid, .benefits-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
@@ -208,26 +274,21 @@
 <body>
     <nav class="navbar">
         <div class="navbar-content">
-            <div><img style="width: 10rem; text-align: center;" src="./BuildPathway-_42b copy 2.webp" alt="logo"/></div>
-            <!-- <div class="logo">BuildPathWay</div> -->
+            <div><img style="width: 10rem;" src="./BuildPathway-_42b copy 2.webp" alt="logo"/></div>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Master Tech Skills<br>Step by Step</h1>
+            <h1>Master MERN Stack<br>Week by Week</h1>
             <p>Your personalized roadmap to becoming a full-stack developer through structured, project-based learning.</p>
             
             <div class="cta-buttons">
-                <!-- REQUIRED: Update these href links -->
-                <!-- <a href="https://pages.razorpay.com/buildpathway" target="_blank" class="btn btn-primary" id="main-cta">
-                    <i class="fas fa-rocket"></i>
-                    Unlock Your Path Now
-                </a> -->
                 <div class="btn btn-secondary">
-                    <form style="margin-top: 1rem; ;" id="main-cta"><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_PpkvB2ZxDDLF7t" async> </script> </form>
+                    <form style="margin-top: 1rem;" id="main-cta">
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_PpkvB2ZxDDLF7t" async></script>
+                    </form>
                 </div>
-               
                 <a href="https://docs.google.com/presentation/d/1vxpYG_pxf2sRXWbw_3w9RgnJU4b-uauxQ1xCbMQEtWU/edit?usp=sharing" target="_blank" class="btn btn-secondary" id="guide-cta">
                     <i class="fas fa-play"></i>
                     View Quick Guide
@@ -262,8 +323,61 @@
         </div>
     </section>
 
+    <section class="benefits-section">
+        <div class="benefits-container">
+            <h2 class="section-title">What You Get</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Step-by-Step Roadmap</h3>
+                    <p>Detailed week-wise MERN Stack learning path designed for both beginners and experienced developers.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Real Projects</h3>
+                    <p>Build real-world applications that showcase your skills to potential employers.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Reward System</h3>
+                    <p>Stay motivated with built-in rewards and achievement tracking as you progress.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Customizable Path</h3>
+                    <p>Adapt the learning path and rewards to match your personal learning style.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instructions-section">
+        <div class="benefits-container">
+            <h2 class="section-title">Important Instructions</h2>
+            <div class="instruction-card">
+                <h3><i class="fas fa-download"></i> After Payment</h3>
+                <p>You'll receive instant access to the complete MERN Stack learning sheet.</p>
+            </div>
+            <div class="instruction-card">
+                <h3><i class="fas fa-copy"></i> First Step</h3>
+                <p>Make a Copy of the Sheet (File → Make a Copy) to begin your learning journey.</p>
+            </div>
+            <div class="important-note">
+                <h3><i class="fas fa-exclamation-circle"></i> Refund Policy</h3>
+                <p>As this is a digital product with instant access, refunds are not possible. Please review all details before purchasing.</p>
+            </div>
+        </div>
+    </section>
+
     <script>
-        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -273,7 +387,6 @@
             });
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
                 document.querySelector('.navbar').style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
@@ -282,7 +395,6 @@
             }
         });
 
-        // Pixel tracking for CTA clicks
         document.getElementById('main-cta').addEventListener('click', function() {
             fbq('track', 'InitiateCheckout');
             gtag('event', 'click', {
